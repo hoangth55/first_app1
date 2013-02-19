@@ -3,7 +3,10 @@ FirstApp1::Application.routes.draw do
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> static-pages
 =======
 >>>>>>> static-pages
   #get "static_pages/home"
@@ -11,6 +14,9 @@ FirstApp1::Application.routes.draw do
   #get "static_pages/help"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> static-pages
+=======
 >>>>>>> static-pages
 =======
 >>>>>>> static-pages
