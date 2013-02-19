@@ -1,21 +1,11 @@
 FirstApp1::Application.routes.draw do
   #get "static_pages/..."
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> static-pages
 
   get "static_pages/home"
 
   get "static_pages/help"
 
   get "static_pages/about"
-<<<<<<< HEAD
->>>>>>> static-pages
-=======
->>>>>>> static-pages
   resources :microposts
 
   resources :users
