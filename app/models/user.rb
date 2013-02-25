@@ -11,8 +11,10 @@
 
 class User < ActiveRecord::Base
   attr_accessible :email, :name,:password, :password_confirmation
-  before_save { |user| user.email = email.downcase }
   has_secure_password
+  
+  before_save { |user| user.email = email.downcase }
+  before_save :create_remember_token
 
   has_many :microposts
   validates :name, presence: true, length: { maximum: 50 }
@@ -25,4 +27,9 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
 
   validates_presence_of :password, :message => 'TYPE ANYTHING THAT YOU WANT TO HEAR'
+  private
+
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
 end
