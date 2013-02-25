@@ -34,6 +34,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails',      ">= 2.0.0.beta"
+  gem 'factory_girl_rails', '4.1.0'
 end
 
 gem 'capybara'
