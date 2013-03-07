@@ -1,4 +1,6 @@
 FirstApp1::Application.routes.draw do
+  get "password_resets/new"
+
   #get "users/new"
   #get "static_pages/..."
   #get "static_pages/home"
@@ -18,7 +20,7 @@ FirstApp1::Application.routes.draw do
     end
   end
 
-
+  resources :password_resets
 
   root to: 'static_pages#home'
 
@@ -29,6 +31,7 @@ FirstApp1::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
+  #match '/projects',    to: 'projects#index'
   
 
 

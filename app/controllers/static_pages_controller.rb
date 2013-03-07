@@ -14,4 +14,11 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def index
+    @projects = Project.search(params[:search])
+  end
 end
+
+
+
